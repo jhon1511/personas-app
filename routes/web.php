@@ -32,8 +32,8 @@ Route::put('/departamentos/{departamento}',[DepartamentoController::class,'updat
 Route::get('/departamentos/{departamento}/edit',[DepartamentoController::class,'edit'])->name('departamentos.edit');
 //PAISES
 Route::get('/paises',[PaisController::class,'index'])->name('paises.index');
-//Route::post('/departamentos',[DepartamentoController::class,'store'])->name('departamentos.store');
-//Route::get('/departamentos/create',[DepartamentoController::class,'create'])->name('departamentos.create');
+Route::post('/paises',[PaisController::class,'store'])->name('paises.store');
+Route::get('/paises/create',[PaisController::class,'create'])->name('paises.create');
 //Route::delete('/departamentos/{departamento}',[DepartamentoController::class,'destroy'])->name('departamentos.destroy');
 //Route::put('/departamentos/{departamento}',[DepartamentoController::class,'update'])->name('departamentos.update');
 //Route::get('/departamentos/{departamento}/edit',[DepartamentoController::class,'edit'])->name('departamentos.edit');

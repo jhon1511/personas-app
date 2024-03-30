@@ -19,9 +19,8 @@
     @csrf
     <div class="mb-3">
     <label for="id" class="form-label">Code</label>
-    <input type="text" class="form-control" id="id" aria-describedby="idHelp" name="id"
-         disabled="disabled">
-    <div id="idHelp" class="form-text">Municipality code</div>
+    <input type="text" class="form-control" id="id" aria-describedby="idHelp" name="id" >
+    <div id="idHelp" class="form-text">Pais Code</div>
     </div>
     <div class="mb-3">
     <label for="name" class="form-label">Municipality</label>
