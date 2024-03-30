@@ -12,6 +12,8 @@
   <body>
     <div class="container">
       <h1>Listado de Departamentos</h1>
+      <a href="{{ route('departamentos.create')}}" class= "btn btn-success">Add</a>
+
         <table class="table">
             <thead>
                 <tr>
@@ -26,7 +28,7 @@
                 <tr>
                 <th scope="row">{{ $departamento->depa_codi }}</th>
               <td>{{ $departamento->depa_nomb }}</td>
-              <td>{{ $departamento->pais_code }}</td>
+              <td>{{ $departamento->pais_nomb }}</td>
               <td>
                 </tr>
                 @endforeach
