@@ -42,7 +42,7 @@
 </select>
     <div class="mt-3">
     <button type="submit" class="btn btn-primary">Save</button>
-    <a href="{{ route('comunas.index') }}" class="btn btn-warning">Cancel</a>
+    <a href="{{ route('municipios.index') }}" class="btn btn-warning">Cancel</a>
     </div>
 </form>
 </div>

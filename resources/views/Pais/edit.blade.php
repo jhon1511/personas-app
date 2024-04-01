@@ -38,7 +38,7 @@
             </select>
             <div class="mt-3">
                 <button type="submit" class="btn btn-primary">Update</button>
-                <a href="{{route('departamentos.index')}}" class="btn btn-warning">Cancel</a>
+                <a href="{{route('paises.index')}}" class="btn btn-warning">Cancel</a>
             </div>
             
         </form>

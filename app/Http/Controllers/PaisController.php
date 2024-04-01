@@ -84,7 +84,7 @@ class PaisController extends Controller
         $pais->save();
 
         $paises = DB::table('tb_pais')
-        ->join('tb_pais', 'tb_municipio.muni_codi', '=', 'tb_pais.muni_codi')
+        ->join('tb_pais', 'tb_pais.muni_codi', '=', 'tb_municipio.muni_codi')
         ->select('tb_pais.*', "tb_municipio.muni_nomb")
         ->get();
         
