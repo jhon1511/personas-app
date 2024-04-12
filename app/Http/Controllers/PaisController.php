@@ -80,11 +80,11 @@ class PaisController extends Controller
         $pais = Pais::find($id);
 
         $pais->pais_nomb = $request->name;
-        $pais->muni_codi = $request->code;
+        $pais->pais_capi = $request->code;
         $pais->save();
 
         $paises = DB::table('tb_pais')
-        ->join('tb_pais', 'tb_pais.muni_codi', '=', 'tb_municipio.muni_codi')
+        ->join('tb_municipio', 'tb_pais.pais_capi', '=', 'tb_municipio.muni_codi')
         ->select('tb_pais.*', "tb_municipio.muni_nomb")
         ->get();
         
