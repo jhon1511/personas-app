@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ComunaController;
+use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\PaisController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,11 +16,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/comunas',[ComunaController::class,'index'])->name('comunas.index');
+Route::get('/comunas',[ComunaController::class,'index'])->name('comunas.index');
 Route::post('/comunas',[ComunaController::class,'store'])->name('comunas.store');
 Route::get('/comunas/create',[ComunaController::class,'create'])->name('comunas.create');
 Route::delete('/comunas/{comuna}',[ComunaController::class,'destroy'])->name('comunas.destroy');
@@ -44,7 +47,12 @@ Route::get('/paises/create',[PaisController::class,'create'])->name('paises.crea
 Route::delete('/paises/{pais}',[PaisController::class,'destroy'])->name('paises.destroy');
 Route::put('/paises/{pais}',[PaisController::class,'update'])->name('paises.update');
 Route::get('/paises/{pais}/edit',[PaisController::class,'edit'])->name('paises.edit');
+
+require __DIR__.'/auth.php';
+
 });
+
+
 Route::get('/comunas',[ComunaController::class,'index'])->name('comunas.index');
 Route::post('/comunas',[ComunaController::class,'store'])->name('comunas.store');
 Route::get('/comunas/create',[ComunaController::class,'create'])->name('comunas.create');
